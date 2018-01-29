@@ -2783,6 +2783,53 @@ header.header-prepare .nav-bar-icon > span::after {
         margin-top: 30px;
     }
 
+.intro-links {
+    padding-top: 10px;
+}
+
+    /*------------------------------------------------------------------*/
+    /* Social */
+    /*------------------------------------------------------------------*/
+    .intro-links .social {
+        list-style: outside none none;
+        padding: 0;
+    }
+
+        .intro-links .social li {
+            display: inline-block;
+            list-style: outside none none;
+            margin: 0 20px;
+        }
+
+            .intro-links .social li a {
+                color: #fff;
+                border: 1px solid #fff;
+                display: block;
+                font-size: 25px;
+                height: 50px;
+                line-height: 46px;
+                text-align: center;
+                width: 50px;
+                transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+
+                .intro-links .social li a i, .footer .social li a span {
+                    transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                }
+
+                .intro-links .social li a:hover {
+                    background: #fff none repeat scroll 0 0;
+                    color: #000;
+                }
+
 @media (max-width: 1024px) {
     .intro-title {
         letter-spacing: 0;
@@ -2795,6 +2842,10 @@ header.header-prepare .nav-bar-icon > span::after {
         letter-spacing: 0;
         font-size: 30px;
     }
+}
+
+.about-me-photo{
+    width: 80%;
 }
 
 /*------------------------------------------------------------------*/
@@ -2970,7 +3021,7 @@ header.header-prepare .nav-bar-icon > span::after {
                 }
 
 .team-item-info {
-    padding-top: 15px;
+    /* padding-top: 15px; */
     text-align: center;
 }
 
