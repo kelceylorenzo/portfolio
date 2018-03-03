@@ -16,9 +16,10 @@
     <link rel="icon" type="image/png" href="img/favicon.png" />
     <link rel="apple-touch-icon" href="img/favicon.png" />
 
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="css/plugins/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body class="wow-animate">
@@ -90,8 +91,13 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a target="_blank" href="https://www.instagram.com/">
+                                        <a target="_blank" href="https://www.instagram.com/kelceyl">
                                             <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a target="_blank" href="./media/resume.pdf">
+                                            <i class="fa fa-file-text"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -119,74 +125,33 @@
             </div>
         </section>
 
-        <section id="skills" class="section-padding gray-bg bg-image overlay-light" data-stellar-background-ratio="0.4" data-background-img="img/full/16.jpg">
+        <section id="skills" class="section-padding">
             <div class="container text-center">
                 <h2 class="mb-60">Skills</h2>
-            </div>
-            <div class="container">
-                <div class="owl-carousel client-carousel">
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/css3-plain-wordmark.svg" alt="" />
-                            </a>
-                        </div>
+                <div class="row">
+                    <div class="col-sm-2 content-box m-45">
+                        <img class='skills-images' src="img/skills/css3-plain-wordmark.svg" alt="" />
+                        <h2 class="alt-title">CSS3</h2>
                     </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/html5-plain-wordmark.svg" alt="" />
-                            </a>
-                        </div>
+                    <div class="col-sm-2 content-box m-45">
+                        <img class='skills-images' src="img/skills/html5-plain-wordmark.svg" alt="" />
                     </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/javascript-original.svg" alt="" />
-                            </a>
-                        </div>
+                    <div class="col-sm-2 content-box m-45">
+                        <img class='skills-images' src="img/skills/javascript-original.svg" alt="" />
                     </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/jquery-plain-wordmark.svg" alt="" />
-                            </a>
-                        </div>
+                    <div class="col-sm-2 content-box m-45">
+                        <img class='skills-images' src="img/skills/jquery-plain-wordmark.svg" alt="" />
                     </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/react-original-wordmark.svg" alt="" />
-                            </a>
-                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2 content-box m-45">
+                        <img src="img/skills/react-original-wordmark.svg" alt="" />
                     </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/photoshop-cc.svg" alt="" />
-                            </a>
-                        </div>
+                    <div class="col-sm-2 content-box m-45">
+                        <img src="img/skills/git-original-wordmark.svg" alt="" />
                     </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/indesign-cc.svg" alt="" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/git-original-wordmark.svg" alt="" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="client-logo">
-                            <a href="#">
-                                <img src="img/skills/github-original-wordmark.svg" alt="" />
-                            </a>
-                        </div>
+                    <div class="col-sm-2 content-box m-45">
+                        <img src="img/skills/github-original-wordmark.svg" alt="" />
                     </div>
                 </div>
             </div>
@@ -372,7 +337,7 @@
 
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <form id="contact" class="contact-form row" role="form">
+                        <form id="contact" class="contact-form row" action='php_mailer/mail_handler.php' method='post'>
                             <div class="col-md-12 text-center">
                                 <h5 class="successContent">
                                     <i class="fa fa-check left" style="color: #5cb45d;"></i>Your message has been received; I look forward to reading your message!
@@ -439,6 +404,11 @@
                             <i class="fa fa-instagram"></i>
                         </a>
                     </li>
+                    <li>
+                        <a target="_blank" href="./media/resume.pdf">
+                            <i class="fa fa-file-text"></i>
+                        </a>
+                    </li>
 
                 </ul>
                 <p class="copyright">
@@ -471,6 +441,7 @@
     <script src="js/send-subscribe.js" type="text/javascript"></script>
     <script src="js/contact-form.js" type="text/javascript"></script>
     <script src="js/theme.js" type="text/javascript"></script>
+
 
 
 </body>
