@@ -4171,3 +4171,17 @@ form .error {
         margin-right: 10px;
         font-size: 18px;
     }
+
+
+    /* Additional CSS */
+
+    .skills-images{
+        width: 50%;
+        margin: auto;
+    }
+
+    .skills-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
