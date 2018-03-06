@@ -2031,7 +2031,7 @@ form label.error {
     }
 
     .header .logo a {
-        margin-top: 15px;
+        /* margin-top: 15px; */
         margin-bottom: 15px;
         width: 100px;
         transition: all 0.3s ease 0s;
@@ -2341,7 +2341,7 @@ header.header-prepare .nav-bar-icon > span::after {
     .nav-bar-icon, .nav-mobile.nav-bar-icon, .header-fixed .nav-bar-icon {
         display: inline-block;
         float: right;
-        margin-top: 21px;
+        /* margin-top: 21px; */
         margin-bottom: 21px;
     }
 
@@ -2845,7 +2845,7 @@ header.header-prepare .nav-bar-icon > span::after {
 }
 
 .about-me-photo{
-    width: 80%;
+    width: 65%;
 }
 
 /*------------------------------------------------------------------*/
