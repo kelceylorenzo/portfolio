@@ -440,7 +440,7 @@ $(function() {
 			$el.css('background-position', 'left' + ' ' + yPos_p + 'px');
 		}
 		if ($('.parallax').hasClass('parallax-background2')) {
-			$el.css('background-position', 'left' + ' ' + -yPos_p + 'px');
+			$el.css('background-position', 'top center');
 		}
 	}
 

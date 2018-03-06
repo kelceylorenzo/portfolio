@@ -121,6 +121,7 @@ body {
 }
 
 .bg-image {
+    background-image:url("img/full/header-background.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,6 +138,7 @@ body {
 
 #intro .bg-image, #intro.bg-image, #inner-intro .bg-image, #inner-intro.bg-image {
     background-attachment: fixed;
+   
 }
 
 .slide-bg-image {
