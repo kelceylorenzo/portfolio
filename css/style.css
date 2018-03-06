@@ -128,7 +128,7 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
-    /*background-attachment: fixed;*/
+
 }
 
 .bg-fixed {
@@ -137,6 +137,7 @@ body {
 
 #intro .bg-image, #intro.bg-image, #inner-intro .bg-image, #inner-intro.bg-image {
     background-attachment: fixed;
+   
 }
 
 .slide-bg-image {
@@ -398,7 +399,7 @@ h6 {
 }
 
 h1.alt-title {
-    font-size: 22px;
+    font-size: 25px;
     margin-bottom: 25px;
 }
 
@@ -880,8 +881,8 @@ form label.error {
 
 /*padding*/
 .section-padding {
-    padding-top: 120px;
-    padding-bottom: 120px;
+       padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .section-padding-t {
@@ -2031,7 +2032,7 @@ form label.error {
     }
 
     .header .logo a {
-        margin-top: 15px;
+        /* margin-top: 15px; */
         margin-bottom: 15px;
         width: 100px;
         transition: all 0.3s ease 0s;
@@ -2320,7 +2321,7 @@ header.header-prepare .nav-bar-icon > span::after {
     }
 
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 767px) {
     .nav-menu ul.nav-menu-inner li {
         display: block;
         width: 100%;
@@ -2341,7 +2342,7 @@ header.header-prepare .nav-bar-icon > span::after {
     .nav-bar-icon, .nav-mobile.nav-bar-icon, .header-fixed .nav-bar-icon {
         display: inline-block;
         float: right;
-        margin-top: 21px;
+        /* margin-top: 21px; */
         margin-bottom: 21px;
     }
 
@@ -2602,7 +2603,6 @@ header.header-prepare .nav-bar-icon > span::after {
         right: 30px;
         top: 30px;
         display: inline-block;
-        /*background: url("../img/close-white.png") no-repeat center center;*/
         color: #fff;
         font-size: 18px;
         line-height: 0;
@@ -2783,18 +2783,69 @@ header.header-prepare .nav-bar-icon > span::after {
         margin-top: 30px;
     }
 
-@media (max-width: 1024px) {
+.intro-links {
+    padding-top: 10px;
+}
+
+    /*------------------------------------------------------------------*/
+    /* Social */
+    /*------------------------------------------------------------------*/
+    .intro-links .social {
+        list-style: outside none none;
+        padding: 0;
+    }
+
+        .intro-links .social li {
+            display: inline-block;
+            list-style: outside none none;
+            margin: 0 20px;
+        }
+
+            .intro-links .social li a {
+                color: #fff;
+                border: 1px solid #fff;
+                display: block;
+                font-size: 25px;
+                height: 50px;
+                line-height: 46px;
+                text-align: center;
+                width: 50px;
+                transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+
+                .intro-links .social li a i, .footer .social li a span {
+                    transform: rotate(-45deg);
+                    -moz-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    -o-transform: rotate(-45deg);
+                    -webkit-transform: rotate(-45deg);
+                }
+
+                .intro-links .social li a:hover {
+                    background: #fff none repeat scroll 0 0;
+                    color: #000;
+                }
+
+@media (max-width: 767px) {
     .intro-title {
         letter-spacing: 0;
         font-size: 46px;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 500px) {
     .intro-title {
         letter-spacing: 0;
         font-size: 30px;
     }
+}
+
+.about-me-photo{
+    width: 65%;
 }
 
 /*------------------------------------------------------------------*/
@@ -2970,7 +3021,7 @@ header.header-prepare .nav-bar-icon > span::after {
                 }
 
 .team-item-info {
-    padding-top: 15px;
+    /* padding-top: 15px; */
     text-align: center;
 }
 
@@ -3533,8 +3584,8 @@ form .error {
 /*==========================================================================================================*/
 
 .footer {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 40px;
+    padding-bottom: 20px;
 }
 
     /*------------------------------------------------------------------*/
@@ -3639,7 +3690,6 @@ form .error {
         background: #f7f7f7;
         border-color: #f7f7f7;
     }
-
 
 /*Icon Style 1*/
 
@@ -3756,7 +3806,7 @@ form .error {
 }
 
 .alt-icon-top {
-    margin-bottom: 25px;
+    /* margin-bottom: 25px; */
     text-align: center;
 }
 
@@ -4120,4 +4170,18 @@ form .error {
         margin-left: 10px;
         margin-right: 10px;
         font-size: 18px;
+    }
+
+
+    /* Additional CSS */
+
+    .skills-images{
+        width: 50%;
+        margin: auto;
+    }
+
+    .skills-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
