@@ -121,7 +121,6 @@ body {
 }
 
 .bg-image {
-    background-image:url("img/full/header-background.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2604,7 +2603,6 @@ header.header-prepare .nav-bar-icon > span::after {
         right: 30px;
         top: 30px;
         display: inline-block;
-        /*background: url("../img/close-white.png") no-repeat center center;*/
         color: #fff;
         font-size: 18px;
         line-height: 0;
