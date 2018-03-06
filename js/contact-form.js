@@ -12,6 +12,10 @@
     =================================== */
 	$('#form-submit').on('click', function(e) {
 		e.preventDefault();
+		$('#form-submit')
+			.text('Sending...')
+			.removeClass('btn-black btn-white')
+			.addClass('btn-color');
 		var name = $('#form-name').val();
 		var email = $('#form-email').val();
 		var subject = $('#form-subject').val();
@@ -42,11 +46,19 @@
 					$('#form-email').val('');
 					$('#form-subject').val('');
 					$('#form-message').val('');
+					$('#form-submit')
+						.text('Sent')
+						.removeClass('btn-color')
+						.addClass('btn-white');
 				}
 			});
 		} else {
 			$('.errorContent').fadeIn(1000);
 			$('.successContent').fadeOut(500);
+			$('#form-submit')
+				.text('Send Message')
+				.removeClass('btn-color')
+				.addClass('btn-black');
 		}
 		return false;
 	});
