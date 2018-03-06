@@ -10,7 +10,7 @@
 	/* =================================
     ===  CONTACT FORM               ====
     =================================== */
-	$('#contact').submit(function(e) {
+	$('#form-submit').on('click', function(e) {
 		e.preventDefault();
 		var name = $('#form-name').val();
 		var email = $('#form-email').val();
@@ -27,7 +27,8 @@
 		if (validEmail(email) && message.length > 1 && name.length > 1) {
 			$.ajax({
 				type: 'POST',
-				url: './php_mailer/mail_handler.php',
+				url: 'php_mailer/mail_handler.php',
+				dataType: 'JSON',
 				data: {
 					'form-name': name,
 					'form-email': email,
