@@ -1995,7 +1995,7 @@ form label.error {
     opacity: 1;
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 767px) {
 
     /*header nav style*/
     .header.header-prepare .nav-menu ul.nav-menu-inner > li > a {
@@ -2102,7 +2102,7 @@ form label.error {
         }
 
         .nav-menu ul.nav-menu-inner > li > a {
-            color: rgba(34,34,34,0.60);
+            color: rgba(255,255,255,0.60);
         }
 
 .header-light .nav-menu ul.nav-menu-inner > li > a {
