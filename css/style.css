@@ -238,7 +238,7 @@ body {
     color: #333;
     font-size: 30px;
     margin-bottom: 15px;
-    color: #fff;
+    /* color: #fff; */
 }
 
 .play-icon-lg, .play-icon-md {
@@ -2102,7 +2102,7 @@ form label.error {
         }
 
         .nav-menu ul.nav-menu-inner > li > a {
-            color: rgba(255,255,255,0.60);
+            color: rgba(34,34,34,0.60);
         }
 
 .header-light .nav-menu ul.nav-menu-inner > li > a {
@@ -4175,12 +4175,17 @@ form .error {
     /* Additional CSS */
 
     .skills-images{
-        width: 50%;
+        width: 40%;
         margin: auto;
     }
 
-    .skills-container{
+    .skills-container,
+    .links-container{
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+
+    i:hover{
+        cursor: pointer
     }
