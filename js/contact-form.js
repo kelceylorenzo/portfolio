@@ -42,10 +42,21 @@
 				success: function() {
 					$('.successContent').fadeIn(1000);
 					$('.errorContent').fadeOut(500);
-					$('#form-name').val('');
-					$('#form-email').val('');
-					$('#form-subject').val('');
-					$('#form-message').val('');
+					$('#name-feedback').text('');
+					$('#email-feedback').text('');
+					$('#message-feedback').text('');
+					$('#form-name')
+						.removeClass('error')
+						.addClass('success');
+					$('#form-email')
+						.removeClass('error')
+						.addClass('success');
+					$('#form-message')
+						.removeClass('error')
+						.addClass('success');
+					if ($('#form-subject').val() !== '') {
+						$('#form-subject').addClass('success');
+					}
 					$('#form-submit')
 						.text('Sent')
 						.removeClass('btn-color')
@@ -55,6 +66,23 @@
 		} else {
 			$('.errorContent').fadeIn(1000);
 			$('.successContent').fadeOut(500);
+
+			if ($('#form-name').val() === '') {
+				$('#name-feedback').text('Please enter your name.');
+				$('#form-name').addClass('error');
+			}
+
+			var email = $('#form-email').val();
+			if (!validateEmail(email)) {
+				$('#email-feedback').text('Please enter a valid e-mail.');
+				$('#form-email').addClass('error');
+			}
+
+			if ($('#form-message').val() === '') {
+				$('#message-feedback').text('Please enter a message.');
+				$('#form-message').addClass('error');
+			}
+
 			$('#form-submit')
 				.text('Send Message')
 				.removeClass('btn-color')
@@ -63,3 +91,8 @@
 		return false;
 	});
 })(jQuery);
+
+function validateEmail(email) {
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+}

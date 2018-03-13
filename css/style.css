@@ -824,6 +824,10 @@ form .error {
     border-color: #e1534f;
 }
 
+form .success{
+    border-color: #17a697;
+}
+
 form label.error {
     margin-bottom: 0px;
     margin-top: 3px;
