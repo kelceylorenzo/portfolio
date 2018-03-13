@@ -3870,7 +3870,7 @@ form .error {
     }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1070px) {
     .portfolio-grid .portfolio-item {
         width: 50%;
     }
@@ -3887,7 +3887,7 @@ form .error {
     overflow: hidden;
 }
 
-    .portfolio-box a.porfolio-popup {
+    .portfolio-box div.portfolio-popup {
         display: block;
     }
 
@@ -3936,6 +3936,7 @@ form .error {
     .portfolio-box:hover .portfolio-caption-mask {
         opacity: 1;
         visibility: visible;
+        width: 100%;
     }
 
     .portfolio-box .portfolio-caption-mask .portfolio-caption-text {
