@@ -12,9 +12,17 @@
     =================================== */
 	$('#form-submit').on('click', function(e) {
 		e.preventDefault();
+
+		$('#name-feedback').text('');
+		$('#email-feedback').text('');
+		$('#message-feedback').text('');
+		$('#form-name').removeClass('error');
+		$('#form-email').removeClass('error');
+		$('#form-message').removeClass('error');
+
 		$('#form-submit')
 			.text('Sending...')
-			.removeClass('btn-black btn-white')
+			.removeClass('btn-black btn-black-outline')
 			.addClass('btn-color');
 		var name = $('#form-name').val();
 		var email = $('#form-email').val();
@@ -45,22 +53,16 @@
 					$('#name-feedback').text('');
 					$('#email-feedback').text('');
 					$('#message-feedback').text('');
-					$('#form-name')
-						.removeClass('error')
-						.addClass('success');
-					$('#form-email')
-						.removeClass('error')
-						.addClass('success');
-					$('#form-message')
-						.removeClass('error')
-						.addClass('success');
+					$('#form-name').addClass('success');
+					$('#form-email').addClass('success');
+					$('#form-message').addClass('success');
 					if ($('#form-subject').val() !== '') {
 						$('#form-subject').addClass('success');
 					}
 					$('#form-submit')
-						.text('Sent')
+						.text('Sent!')
 						.removeClass('btn-color')
-						.addClass('btn-white');
+						.addClass('btn-black-outline');
 				}
 			});
 		} else {
