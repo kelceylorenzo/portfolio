@@ -2165,8 +2165,8 @@ form label.error {
     position: relative;
     height: 16px;
     width: 20px;
-    margin-top: 34px;
-    margin-bottom: 35px;
+    /* margin-top: 34px;
+    margin-bottom: 35px; */
     margin-left: 15px;
     transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
     -moz-transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
@@ -2176,7 +2176,7 @@ form label.error {
 }
 
 .header-fixed .nav-bar-icon {
-    margin-top: 21px;
+    /* margin-top: 21px; */
     margin-bottom: 21px;
 }
 
@@ -2343,15 +2343,23 @@ header.header-prepare .nav-bar-icon > span::after {
     }
 
     .nav-bar-icon, .nav-mobile.nav-bar-icon, .header-fixed .nav-bar-icon {
-        display: inline-block;
+        padding: 30px;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-top: 10px;
+        /* display: inline-block; */
         float: right;
-        /* margin-top: 21px; */
-        margin-bottom: 21px;
+        /* margin-bottom: 21px; */
     }
 
     .nav-menu ul.nav-menu-inner li a, .header-fixed .nav-menu ul.nav-menu-inner li a {
         padding: 15px 12px;
         border-top: 1px solid #444;
+    }
+
+    .header-prepare .nav-bar-icon{
+        margin-top: 0;
     }
 
 
@@ -4197,9 +4205,6 @@ form .error {
 
     .inactive-link i{
         color: lightgrey;
-    }
-
-    .inactive-link i:hover{
         cursor: default;
     }
 
@@ -4209,4 +4214,8 @@ form .error {
 
     .project-link i p, .inactive-link i p{
         color: inherit;
+    }
+
+    .contact-info i{
+        cursor: default;
     }
