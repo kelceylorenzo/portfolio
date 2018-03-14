@@ -4216,6 +4216,10 @@ form .error {
         color: inherit;
     }
 
-    .contact-info i{
+    .contact-info div:hover{
+        color: #17a697;
+    }
+    
+    .no-click-contact-info i{
         cursor: default;
     }

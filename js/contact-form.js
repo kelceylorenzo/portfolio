@@ -24,10 +24,14 @@
 			.text('Sending...')
 			.removeClass('btn-black btn-black-outline')
 			.addClass('btn-color');
-		var name = $('#form-name').val();
-		var email = $('#form-email').val();
-		var subject = $('#form-subject').val();
-		var message = $('#form-message').val();
+		var name = trimWhiteSpace($('#form-name').val());
+		var email = trimWhiteSpace($('#form-email').val());
+		var subject = trimWhiteSpace($('#form-subject').val());
+		var message = trimWhiteSpace($('#form-message').val());
+
+		function trimWhiteSpace(string) {
+			return string.replace(/^\s+|\s+$/gm, '');
+		}
 
 		function validEmail(emailAddress) {
 			var pattern = new RegExp(
@@ -69,20 +73,24 @@
 			$('.errorContent').fadeIn(1000);
 			$('.successContent').fadeOut(500);
 
-			if ($('#form-name').val() === '') {
+			var nameCheck = $('#form-name').val();
+			if (trimWhiteSpace(nameCheck) === '') {
 				$('#name-feedback').text('Please enter your name.');
 				$('#form-name').addClass('error');
+				$('#form-name').val('');
 			}
 
-			var email = $('#form-email').val();
-			if (!validateEmail(email)) {
+			var emailCheck = $('#form-email').val();
+			if (!validateEmail(emailCheck)) {
 				$('#email-feedback').text('Please enter a valid e-mail.');
 				$('#form-email').addClass('error');
 			}
 
-			if ($('#form-message').val() === '') {
+			var messageCheck = $('#form-message').val();
+			if (trimWhiteSpace(messageCheck) === '') {
 				$('#message-feedback').text('Please enter a message.');
 				$('#form-message').addClass('error');
+				$('#form-message').val('');
 			}
 
 			$('#form-submit')
