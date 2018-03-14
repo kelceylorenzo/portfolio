@@ -2358,7 +2358,7 @@ header.header-prepare .nav-bar-icon > span::after {
         border-top: 1px solid #444;
     }
 
-    .header-prepare .nav-bar-icon{
+    .header-prepare .nav-bar-icon, .header-fixed .nav-bar-icon{
         margin-top: 0;
     }
 
