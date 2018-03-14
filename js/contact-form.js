@@ -81,7 +81,10 @@
 			}
 
 			var emailCheck = $('#form-email').val();
-			if (!validateEmail(emailCheck)) {
+			if (trimWhiteSpace(emailCheck) === '') {
+				$('#form-email').val('');
+			}
+			if (!validEmail(emailCheck)) {
 				$('#email-feedback').text('Please enter a valid e-mail.');
 				$('#form-email').addClass('error');
 			}
@@ -93,6 +96,11 @@
 				$('#form-message').val('');
 			}
 
+			var subjectCheck = $('#form-subject').val();
+			if (trimWhiteSpace(subjectCheck) === '') {
+				$('#form-subject').val('');
+			}
+
 			$('#form-submit')
 				.text('Send Message')
 				.removeClass('btn-color')
@@ -101,8 +109,3 @@
 		return false;
 	});
 })(jQuery);
-
-function validateEmail(email) {
-	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	return re.test(email);
-}
