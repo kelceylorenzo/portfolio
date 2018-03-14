@@ -4194,3 +4194,19 @@ form .error {
     i:hover{
         cursor: pointer
     }
+
+    .inactive-link i{
+        color: lightgrey;
+    }
+
+    .inactive-link i:hover{
+        cursor: default;
+    }
+
+    .project-link i:hover{
+        color: #17a697;
+    }
+
+    .project-link i p, .inactive-link i p{
+        color: inherit;
+    }
