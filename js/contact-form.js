@@ -12,14 +12,26 @@
     =================================== */
 	$('#form-submit').on('click', function(e) {
 		e.preventDefault();
+
+		$('#name-feedback').text('');
+		$('#email-feedback').text('');
+		$('#message-feedback').text('');
+		$('#form-name').removeClass('error');
+		$('#form-email').removeClass('error');
+		$('#form-message').removeClass('error');
+
 		$('#form-submit')
 			.text('Sending...')
-			.removeClass('btn-black btn-white')
+			.removeClass('btn-black btn-black-outline')
 			.addClass('btn-color');
-		var name = $('#form-name').val();
-		var email = $('#form-email').val();
-		var subject = $('#form-subject').val();
-		var message = $('#form-message').val();
+		var name = trimWhiteSpace($('#form-name').val());
+		var email = trimWhiteSpace($('#form-email').val());
+		var subject = trimWhiteSpace($('#form-subject').val());
+		var message = trimWhiteSpace($('#form-message').val());
+
+		function trimWhiteSpace(string) {
+			return string.replace(/^\s+|\s+$/gm, '');
+		}
 
 		function validEmail(emailAddress) {
 			var pattern = new RegExp(
@@ -42,19 +54,53 @@
 				success: function() {
 					$('.successContent').fadeIn(1000);
 					$('.errorContent').fadeOut(500);
-					$('#form-name').val('');
-					$('#form-email').val('');
-					$('#form-subject').val('');
-					$('#form-message').val('');
+					$('#name-feedback').text('');
+					$('#email-feedback').text('');
+					$('#message-feedback').text('');
+					$('#form-name').addClass('success');
+					$('#form-email').addClass('success');
+					$('#form-message').addClass('success');
+					if ($('#form-subject').val() !== '') {
+						$('#form-subject').addClass('success');
+					}
 					$('#form-submit')
-						.text('Sent')
+						.text('Sent!')
 						.removeClass('btn-color')
-						.addClass('btn-white');
+						.addClass('btn-black-outline');
 				}
 			});
 		} else {
 			$('.errorContent').fadeIn(1000);
 			$('.successContent').fadeOut(500);
+
+			var nameCheck = $('#form-name').val();
+			if (trimWhiteSpace(nameCheck) === '') {
+				$('#name-feedback').text('Please enter your name.');
+				$('#form-name').addClass('error');
+				$('#form-name').val('');
+			}
+
+			var emailCheck = $('#form-email').val();
+			if (trimWhiteSpace(emailCheck) === '') {
+				$('#form-email').val('');
+			}
+			if (!validEmail(emailCheck)) {
+				$('#email-feedback').text('Please enter a valid e-mail.');
+				$('#form-email').addClass('error');
+			}
+
+			var messageCheck = $('#form-message').val();
+			if (trimWhiteSpace(messageCheck) === '') {
+				$('#message-feedback').text('Please enter a message.');
+				$('#form-message').addClass('error');
+				$('#form-message').val('');
+			}
+
+			var subjectCheck = $('#form-subject').val();
+			if (trimWhiteSpace(subjectCheck) === '') {
+				$('#form-subject').val('');
+			}
+
 			$('#form-submit')
 				.text('Send Message')
 				.removeClass('btn-color')
