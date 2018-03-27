@@ -54,6 +54,7 @@
 				success: function() {
 					$('.successContent').fadeIn(1000);
 					$('.errorContent').fadeOut(500);
+					$('.failContent').fadeOut(500);
 					$('#name-feedback').text('');
 					$('#email-feedback').text('');
 					$('#message-feedback').text('');
@@ -67,11 +68,22 @@
 						.text('Sent!')
 						.removeClass('btn-color')
 						.addClass('btn-black-outline');
+				},
+				error: function() {
+					$('.failContent').fadeIn(1000);
+					$('.successContent').fadeOut(500);
+					$('.errorContent').fadeOut(500);
+
+					$('#form-submit')
+						.text('Try Again')
+						.removeClass('btn-color')
+						.addClass('btn-black-outline');
 				}
 			});
 		} else {
 			$('.errorContent').fadeIn(1000);
 			$('.successContent').fadeOut(500);
+			$('.failContent').fadeOut(500);
 
 			var nameCheck = $('#form-name').val();
 			if (trimWhiteSpace(nameCheck) === '') {
